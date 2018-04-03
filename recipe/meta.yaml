@@ -40,6 +40,7 @@ about:
     any asteroids, comets, or earth satellites whose orbital elements the user
     can provide."
   doc_url: http://rhodesmill.org/pyephem/
+  doc_source_url: https://github.com/brandon-rhodes/pyephem/blob/master/ephem/doc/index.rst
   dev_url: https://github.com/brandon-rhodes/pyephem
 
 extra:
