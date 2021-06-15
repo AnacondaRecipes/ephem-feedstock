@@ -37,7 +37,7 @@ test:
 about:
   home: http://rhodesmill.org/pyephem/
   license: LGPL
-  license_family: LPGL
+  license_family: LGPL
   license_file: LICENSE
   summary: Basic astronomical computations for Python
   description: |
