@@ -11,8 +11,6 @@ source:
 build:
   number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-  ignore_run_exports:
-    - python
 
 requirements:
   build:
@@ -36,8 +34,8 @@ test:
 
 about:
   home: http://rhodesmill.org/pyephem/
-  license: LGPL
-  license_family: LGPL
+  license: MIT
+  license_family: MIT
   license_file: LICENSE
   summary: Basic astronomical computations for Python
   description: |
