@@ -30,11 +30,11 @@ requirements:
 #     f = open(self.path)
 #              ^^^^^^^^^
 # E   AttributeError: 'JPLTest' object has no attribute 'path'
-{% set ignore_tests = " --ignore=ephem/tests/test_jpl.py" %}
+{% set ignore_tests = "test_jpl.py" %}
 
 test:
-  source_files:
-    - ephem/tests
+  # source_files:
+  #   - ephem/tests
   imports:
     - ephem
     - ephem._libastro
@@ -46,7 +46,7 @@ test:
   commands:
     - pip check
     - python -c "from importlib.metadata import version; assert(version('{{ name }}')=='{{ version }}')"
-    - pytest -ra -v --tb=short ephem/tests {{ ignore_tests }}
+    - pytest -ra -v --tb=short --pyargs ephem -k "not {{ ignore_tests }}"
 
 
 about:
