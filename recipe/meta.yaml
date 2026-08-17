@@ -1,16 +1,16 @@
 {% set name = "ephem" %}
-{% set version = "4.2" %}
+{% set version = "4.2.1" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name }}
   version: {{ version }}
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3c4fd64f453e8f40cf862420a70da95a71b6487ace75e8e0cf85d73707db6065
+  sha256: 920cb30369c79fde1088c2060d555ea5f8a50fdc80a9265832fd5bf195cf147f
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation --ignore-installed --no-cache-dir -vv
 
 requirements:
@@ -24,7 +24,6 @@ requirements:
     - wheel
   run:
     - python
-
 
 # ephem/tests/test_jpl.py:33: in runTest
 #     f = open(self.path)
